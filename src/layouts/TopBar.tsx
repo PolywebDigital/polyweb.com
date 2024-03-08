@@ -9,7 +9,7 @@ const TopBar: React.FC = () => {
           <Button>Accueil </Button>
         </li>
         <li>
-          <Button>Comment travaillons-nous </Button>
+          <Button> Notre méthodologie </Button>
         </li>
         <li>
           <Button>Notre équipe </Button>

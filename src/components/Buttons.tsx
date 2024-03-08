@@ -2,17 +2,21 @@ import { ButtonHTMLAttributes } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "../utils/cn";
 
-const buttonVariants = cva("px-4 py-2 rounded-md transition", {
-  variants: {
-    color: {
-      default: "",
-      dark: "bg-black text-white hover:bg-blue-600/90",
+const buttonVariants = cva(
+  "flex items-center px-4 py-2 gap-2 rounded-md transition w-fit",
+  {
+    variants: {
+      color: {
+        default: "",
+        bordered: "border border-2 border-solid border-black ",
+        dark: "bg-black text-white hover:bg-blue-600/90",
+      },
     },
-  },
-  defaultVariants: {
-    color: "default",
-  },
-});
+    defaultVariants: {
+      color: "default",
+    },
+  }
+);
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & {
