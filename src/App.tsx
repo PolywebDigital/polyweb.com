@@ -1,5 +1,6 @@
 import Button from "./components/Buttons";
 import ServicesCard from "./components/ServicesCard";
+import BottomBar from "./layouts/BottomBar";
 import TopBar from "./layouts/TopBar";
 import { GoArrowRight } from "react-icons/go";
 
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           Parlons-en <GoArrowRight />
         </Button>
       </div>
+      <BottomBar />
     </div>
   );
 };

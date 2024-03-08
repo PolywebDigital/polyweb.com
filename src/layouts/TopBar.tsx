@@ -12,7 +12,7 @@ const TopBar: React.FC = () => {
           <Button> Notre méthodologie </Button>
         </li>
         <li>
-          <Button>Notre équipe </Button>
+          <Button> Notre équipe </Button>
         </li>
         <li>
           <Button> Tarification </Button>
