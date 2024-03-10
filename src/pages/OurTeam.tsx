@@ -7,7 +7,7 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 
 const OurTeam: React.FC = () => {
   return (
-    <div className="flex flex-col gap-12 lg:px-[20%] md:px-[10%] sm:px-[5%] lg:py-12 md:py-6 sm:py-2  items-center">
+    <div className="flex flex-col gap-12 lg:px-[20%] md:px-[10%] sm:px-[5%] lg:py-12 md:py-6 sm:py-2 items-center">
       <h1 className="text-7xl font-bold">
         Notre <span className="font-bold text-blue-700"> équipe </span>
       </h1>

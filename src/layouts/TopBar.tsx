@@ -7,7 +7,7 @@ const TopBar: React.FC = () => {
 
   return (
     <div className="flex justify-between w-full px-[15%] py-6">
-      <img className="w-60" src="/image.png" alt="Logo" />
+      <img className="w-60" src="/logo.png" alt="Logo" />
       <ul className="flex items-center gap-2">
         <li>
           <Button onClick={() => navigate(paths.home)}>Accueil </Button>
@@ -28,7 +28,7 @@ const TopBar: React.FC = () => {
         </li>
         */}
         <li>
-          <Button color="dark" onClick={() => navigate(paths.pricing)}>
+          <Button color="dark" onClick={() => navigate(paths.appointment)}>
             Prendre rendez-vous
           </Button>
         </li>
