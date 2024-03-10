@@ -4,6 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 
 const OurTeam: React.FC = () => {
   return (
@@ -24,32 +25,43 @@ const OurTeam: React.FC = () => {
       <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
         <img className="w-[40%] rounded-full" src="jolan.png" alt="Jolan" />
         <div className="flex flex-col gap-6">
-          <h3 className="text-4xl font-bold"> LEBERT Ryan </h3>
+          <div>
+            <h3 className="text-4xl font-bold"> LEBERT Ryan </h3>
+            <span> lebert.ryan.2022@gmail.com </span>
+          </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in
-            malesuada eget fames purus ligula luctus tellus. Habitant
-            condimentum sit gravida praesent.
+            Etudiant en management et commerce, mes responsabilités incluent la
+            gestion proactive de la clientèle, ainsi que la recherche active de
+            nouveaux prospects pour développer notre entreprise.
           </p>
           <ul>
             <li className="flex gap-4">
-              <BusinessCenterIcon />
-              Développement des sites web
+              <ConnectWithoutContactIcon />
+              Prospection
             </li>
           </ul>
         </div>
+        <ul className="flex flex-col gap-4 grow">
+          <li>
+            <a href="https://www.linkedin.com/in/ryan-lebert-351750222/">
+              <LinkedInIcon />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/lebert.ryan/">
+              <InstagramIcon />
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* ANDY */}
       <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
-        <ul className="flex flex-col gap-4 grow">
-          <li>
-            <a href="https://www.linkedin.com/in/andy-lebert/">
-              <LinkedInIcon />
-            </a>
-          </li>
-        </ul>
         <div className="flex  flex-col gap-6 ">
-          <h3 className="text-4xl font-bold"> LEBERT Andy </h3>
+          <div>
+            <h3 className="text-4xl font-bold"> LEBERT Andy </h3>
+            <span> lebert.andy007@gmail.com </span>
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in
             malesuada eget fames purus ligula luctus tellus. Habitant
@@ -63,13 +75,23 @@ const OurTeam: React.FC = () => {
           </ul>
         </div>
         <img className="w-[40%] rounded-full" src="andy.jpg" alt="Andy" />
+        <ul className="flex flex-col gap-4 grow">
+          <li>
+            <a href="https://www.linkedin.com/in/andy-lebert/">
+              <LinkedInIcon />
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* JOLAN */}
       <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
         <img className="w-[40%] rounded-full" src="jolan.png" alt="Jolan" />
         <div className="flex flex-col gap-6">
-          <h3 className="text-4xl font-bold"> COCHET Jolan </h3>
+          <div>
+            <h3 className="text-4xl font-bold">COCHET Jolan </h3>{" "}
+            <span> jolan.cochet.pro@gmail.com </span>
+          </div>
           <p>
             Étudiant en développement logiciel avec une passion pour
             l'innovation technologique et une solide expérience dans la création
