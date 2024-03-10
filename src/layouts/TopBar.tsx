@@ -12,17 +12,21 @@ const TopBar: React.FC = () => {
         <li>
           <Button onClick={() => navigate(paths.home)}>Accueil </Button>
         </li>
+        {/*
         <li>
           <Button onClick={() => navigate(paths.ourMethodology)}>
             Notre méthodologie
           </Button>
         </li>
+        */}
         <li>
           <Button onClick={() => navigate(paths.ourTeam)}>Notre équipe</Button>
         </li>
+        {/*
         <li>
           <Button onClick={() => navigate(paths.pricing)}>Tarification</Button>
         </li>
+        */}
         <li>
           <Button color="dark" onClick={() => navigate(paths.pricing)}>
             Prendre rendez-vous

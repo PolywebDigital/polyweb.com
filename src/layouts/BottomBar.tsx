@@ -1,6 +1,7 @@
 const BottomBar: React.FC = () => {
   return (
     <div className="grid grid-cols-3 pt-16 pb-32 px-[25%] justify-center bg-blue-50 ">
+      {/* TODO RAJOUTER L'ONGLET POSTULER */}
       <div className="flex flex-col items-center gap-4 text-center">
         <h4 className="text-xl font-bold"> PolyWeb </h4>
         <p>
@@ -12,9 +13,9 @@ const BottomBar: React.FC = () => {
         <h4 className="text-xl font-bold"> A propos </h4>
         <ul>
           <li> Accueil </li>
-          <li> Notre méthodologie </li>
+          {/* <li> Notre méthodologie </li> */}
           <li> Notre équipe </li>
-          <li> Tarification </li>
+          {/* <li> Tarification </li> */}
         </ul>
       </div>
       <div className="flex flex-col items-center gap-4 text-center">
