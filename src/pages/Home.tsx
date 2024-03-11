@@ -6,7 +6,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {/* Hero section */}
-      <div className="flex px-[15%] py-12 items-center">
+      <div className="flex px-[15%] py-36 items-center">
         <div className="flex flex-col gap-8">
           <h1 className="text-7xl font-bold">
             How to <span className="font-bold text-blue-700"> level up </span>
@@ -24,10 +24,10 @@ const Home: React.FC = () => {
             </Button>
           </div>
         </div>
-        <img className="w-[50%]" src="hero-image.png" alt="Hero" />
+        <img className="w-[50%]" src="hero.svg" alt="Hero" />
       </div>
       {/* Principals services section */}
-      <div className="flex flex-col px-[15%] py-12 items-center gap-6">
+      <div className="flex flex-col px-[15%] py-24 items-center gap-6">
         <h2 className="text-4xl font-bold"> Nos principaux services </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh
@@ -37,20 +37,22 @@ const Home: React.FC = () => {
         <div className="flex gap-8">
           <ServicesCard
             title="Développement web"
+            imageUrl="/website.svg"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent."
           />
           <ServicesCard
             title="Automatisation de processus"
+            imageUrl="/automation.svg"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent."
           />
         </div>
       </div>
       {/* Start business now */}
-      <div className="flex flex-col px-[15%] py-12 items-center">
+      <div className="flex flex-col gap-12 px-[15%] py-12 items-center">
         <h2 className="text-4xl font-bold">
           Améliorer votre image de marque maintenant !
         </h2>
-        <img className="w-[50%]" src="web-development.png" alt="image" />
+        <img className="w-[30%]" src="/winner.svg" alt="image" />
         <Button color="bordered">
           Parlons-en <GoArrowRight />
         </Button>

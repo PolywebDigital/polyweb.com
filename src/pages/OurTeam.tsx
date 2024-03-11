@@ -23,7 +23,7 @@ const OurTeam: React.FC = () => {
 
       {/* RYAN */}
       <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
-        <img className="w-[40%] rounded-full" src="jolan.png" alt="Jolan" />
+        <img className="w-[40%] rounded-full" src="ryan.png" alt="Jolan" />
         <div className="flex flex-col gap-6">
           <div>
             <h3 className="text-4xl font-bold"> LEBERT Ryan </h3>
@@ -63,9 +63,12 @@ const OurTeam: React.FC = () => {
             <span> lebert.andy007@gmail.com </span>
           </div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in
-            malesuada eget fames purus ligula luctus tellus. Habitant
-            condimentum sit gravida praesent.
+            Étudiant en gestion d'entreprise, je suis là pour guider votre
+            entreprise vers la réussite. Avec ma capacité à prendre des
+            décisions stratégiques, je suis prêt à travailler avec vous pour
+            trouver des solutions pragmatiques et adaptées à vos besoins
+            spécifiques. Contactez-moi dès maintenant pour discuter de la
+            manière dont je peux contribuer à la croissance de votre entreprise.
           </p>
           <ul>
             <li className="flex gap-4">
@@ -89,7 +92,7 @@ const OurTeam: React.FC = () => {
         <img className="w-[40%] rounded-full" src="jolan.png" alt="Jolan" />
         <div className="flex flex-col gap-6">
           <div>
-            <h3 className="text-4xl font-bold">COCHET Jolan </h3>{" "}
+            <h3 className="text-4xl font-bold">COCHET Jolan </h3>
             <span> jolan.cochet.pro@gmail.com </span>
           </div>
           <p>
