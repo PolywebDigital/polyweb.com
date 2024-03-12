@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 
 const OurTeam: React.FC = () => {
   return (
@@ -34,21 +35,31 @@ const OurTeam: React.FC = () => {
             gestion proactive de la clientèle, ainsi que la recherche active de
             nouveaux prospects pour développer notre entreprise.
           </p>
-          <ul>
+          <ul className="flex flex-col gap-2">
+            <li className="flex gap-4">
+              <PersonSearchIcon />
+              Prospection
+            </li>
             <li className="flex gap-4">
               <ConnectWithoutContactIcon />
-              Prospection
+              Gestion de la clientèle
             </li>
           </ul>
         </div>
         <ul className="flex flex-col gap-4 grow">
           <li>
-            <a href="https://www.linkedin.com/in/ryan-lebert-351750222/">
+            <a
+              title="ryan-lebert"
+              href="https://www.linkedin.com/in/ryan-lebert-351750222/"
+            >
               <LinkedInIcon />
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/lebert.ryan/">
+            <a
+              title="@lebert.ryan"
+              href="https://www.instagram.com/lebert.ryan/"
+            >
               <InstagramIcon />
             </a>
           </li>
@@ -70,7 +81,7 @@ const OurTeam: React.FC = () => {
             spécifiques. Contactez-moi dès maintenant pour discuter de la
             manière dont je peux contribuer à la croissance de votre entreprise.
           </p>
-          <ul>
+          <ul className="flex flex-col gap-2">
             <li className="flex gap-4">
               <BusinessCenterIcon />
               Direction financière
@@ -80,7 +91,10 @@ const OurTeam: React.FC = () => {
         <img className="w-[40%] rounded-full" src="andy.jpg" alt="Andy" />
         <ul className="flex flex-col gap-4 grow">
           <li>
-            <a href="https://www.linkedin.com/in/andy-lebert/">
+            <a
+              title="andy-lebert"
+              href="https://www.linkedin.com/in/andy-lebert/"
+            >
               <LinkedInIcon />
             </a>
           </li>
@@ -114,17 +128,20 @@ const OurTeam: React.FC = () => {
         </div>
         <ul className="flex flex-col gap-4 grow">
           <li>
-            <a href="https://www.instagram.com/jojo.coch/">
+            <a title="@jojo.coch" href="https://www.instagram.com/jojo.coch/">
               <InstagramIcon />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/jolan-cochet-39949a2b6">
+            <a
+              title="jolan-cochet"
+              href="https://www.linkedin.com/in/jolan-cochet-39949a2b6"
+            >
               <LinkedInIcon />
             </a>
           </li>
           <li>
-            <a href="https://github.com/COOPER2703">
+            <a title="COOPER2703" href="https://github.com/COOPER2703">
               <GitHubIcon />
             </a>
           </li>
