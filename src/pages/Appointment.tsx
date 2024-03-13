@@ -2,17 +2,10 @@ import { useState } from "react";
 import Button from "../components/Buttons";
 import TextArea from "../components/TextArea";
 import TextField from "../components/TextField";
-
-type FormInputs = {
-  firstname: string;
-  lastname: string;
-  email: string;
-  businessName: string;
-  message: string;
-};
+import { AppointmentInputs, sendAppointmentEmail } from "../api/email";
 
 const Appointment: React.FC = () => {
-  const [formValues, setFormValues] = useState<FormInputs>({
+  const [formValues, setFormValues] = useState<AppointmentInputs>({
     firstname: "",
     lastname: "",
     businessName: "",
@@ -22,7 +15,7 @@ const Appointment: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formValues);
+    sendAppointmentEmail(formValues);
   };
 
   return (
