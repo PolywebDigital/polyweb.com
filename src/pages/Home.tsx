@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Buttons";
 import ServicesCard from "../components/ServicesCard";
 import { GoArrowRight } from "react-icons/go";
+import { paths } from "../constants/Paths";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       {/* Hero section */}
@@ -19,7 +23,10 @@ const Home: React.FC = () => {
           </p>
           <div className="flex gap-4">
             <Button color="dark"> Notre méthodologie </Button>
-            <Button color="bordered">
+            <Button
+              color="bordered"
+              onClick={() => navigate(paths.appointment)}
+            >
               Parlons-en <GoArrowRight />
             </Button>
           </div>
@@ -53,7 +60,7 @@ const Home: React.FC = () => {
           Améliorer votre image de marque maintenant !
         </h2>
         <img className="w-[30%]" src="/winner.svg" alt="image" />
-        <Button color="bordered">
+        <Button color="bordered" onClick={() => navigate(paths.appointment)}>
           Parlons-en <GoArrowRight />
         </Button>
       </div>
