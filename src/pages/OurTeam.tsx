@@ -9,7 +9,7 @@ import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 
 const OurTeam: React.FC = () => {
   return (
-    <div className="flex flex-col gap-12 lg:px-[20%] md:px-[10%] sm:px-[5%] lg:py-12 md:py-6 sm:py-2 items-center">
+    <div className="flex flex-col gap-20 lg:px-[20%] px-[5%] md:px-[15%] items-center">
       <h1 className="text-7xl font-bold">
         Notre <span className="font-bold text-blue-700"> équipe </span>
       </h1>
@@ -23,8 +23,12 @@ const OurTeam: React.FC = () => {
       </p>
 
       {/* RYAN */}
-      <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
-        <img className="w-[40%] rounded-full" src="ryan.png" alt="Jolan" />
+      <div className="relative flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
+        <img
+          className="xl:static xl:translate-y-0 xl:w-[40%] absolute top-0 right-[5%] -translate-y-[30%] w-40 rounded-full"
+          src="ryan.png"
+          alt="Ryan"
+        />
         <div className="flex flex-col gap-6">
           <div>
             <h3 className="text-4xl font-bold"> LEBERT Ryan </h3>
@@ -67,7 +71,7 @@ const OurTeam: React.FC = () => {
       </div>
 
       {/* ANDY */}
-      <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
+      <div className="relative flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
         <div className="flex  flex-col gap-6 ">
           <div>
             <h3 className="text-4xl font-bold"> LEBERT Andy </h3>
@@ -88,7 +92,11 @@ const OurTeam: React.FC = () => {
             </li>
           </ul>
         </div>
-        <img className="w-[40%] rounded-full" src="andy.jpg" alt="Andy" />
+        <img
+          className="xl:static xl:translate-y-0 xl:w-[40%] absolute top-0 right-[5%] -translate-y-[30%] w-40 rounded-full"
+          src="andy.jpg"
+          alt="Andy"
+        />
         <ul className="flex flex-col gap-4 grow">
           <li>
             <a
@@ -102,8 +110,12 @@ const OurTeam: React.FC = () => {
       </div>
 
       {/* JOLAN */}
-      <div className="flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
-        <img className="w-[40%] rounded-full" src="jolan.png" alt="Jolan" />
+      <div className="relative flex items-center bg-blue-50 w-full p-16 rounded-3xl gap-12">
+        <img
+          className="xl:static xl:translate-y-0 xl:w-[40%] absolute top-0 right-[5%] -translate-y-[30%] w-40 rounded-full"
+          src="jolan.png"
+          alt="Jolan"
+        />
         <div className="flex flex-col gap-6">
           <div>
             <h3 className="text-4xl font-bold">COCHET Jolan </h3>

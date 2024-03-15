@@ -20,87 +20,98 @@ const Appointment: React.FC = () => {
     event.preventDefault();
     sendAppointmentEmail(formValues);
     localStorage.setItem("isContactEmailSent", "true");
-
     window.location.reload();
   };
 
   return (
-    <div className="flex flex-col self-center lg:px-[20%] md:px-[10%] sm:px-[5%] items-center py-20 gap-4">
+    <div className="flex gap-20 justify-center px-[5%] md:px-[15%] lg:px-[20%]">
       {!isContactEmailSent ? (
         <>
-          <h1 className="text-7xl font-bold text-center">
-            Formulaire de{" "}
-            <span className="font-bold text-blue-700 ">contact</span>
-          </h1>
-          <p className="text-center">
-            Prêt à donner vie à votre vision en ligne ? Remplissez le formulaire
-            ci-dessous et laissez-nous vous montrer comment nous pouvons créer
-            un site web sur mesure pour votre entreprise. Ensemble, faisons de
-            votre présence en ligne un moteur de succès.
-          </p>
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 py-8 max-w-[500px]"
-            method="POST"
-          >
-            <div className="flex gap-4">
+          <div className="flex flex-col self-center gap-4">
+            <h1 className="text-7xl font-bold text-center xl:text-left">
+              Formulaire de{" "}
+              <span className="font-bold to-blue-700 text-blue-700 ">
+                contact
+              </span>
+            </h1>
+            <p className="text-center xl:text-left">
+              Prêt à donner vie à votre vision en ligne ? Remplissez le
+              formulaire ci-dessous et laissez-nous vous montrer comment nous
+              pouvons créer un site web sur mesure pour votre entreprise.
+              Ensemble, faisons de votre présence en ligne un moteur de succès.
+            </p>
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4 py-8 max-w-full"
+              method="POST"
+            >
+              <div className="flex gap-4">
+                <TextField
+                  label="Prénom"
+                  value={formValues.firstname}
+                  onChange={(e) =>
+                    setFormValues((prev) => ({
+                      ...prev,
+                      firstname: e.target.value,
+                    }))
+                  }
+                  required
+                />
+                <TextField
+                  label="Nom"
+                  value={formValues.lastname}
+                  onChange={(e) =>
+                    setFormValues((prev) => ({
+                      ...prev,
+                      lastname: e.target.value,
+                    }))
+                  }
+                  required
+                />
+              </div>
+
               <TextField
-                label="Prénom"
-                value={formValues.firstname}
+                label="Email"
+                type="email"
+                value={formValues.email}
                 onChange={(e) =>
-                  setFormValues((prev) => ({
-                    ...prev,
-                    firstname: e.target.value,
-                  }))
+                  setFormValues((prev) => ({ ...prev, email: e.target.value }))
                 }
                 required
               />
               <TextField
-                label="Nom"
-                value={formValues.lastname}
+                label="Nom de l'entreprise"
+                value={formValues.businessName}
                 onChange={(e) =>
                   setFormValues((prev) => ({
                     ...prev,
-                    lastname: e.target.value,
+                    businessName: e.target.value,
                   }))
                 }
                 required
               />
-            </div>
 
-            <TextField
-              label="Email"
-              type="email"
-              value={formValues.email}
-              onChange={(e) =>
-                setFormValues((prev) => ({ ...prev, email: e.target.value }))
-              }
-              required
-            />
-            <TextField
-              label="Nom de l'entreprise"
-              value={formValues.businessName}
-              onChange={(e) =>
-                setFormValues((prev) => ({
-                  ...prev,
-                  businessName: e.target.value,
-                }))
-              }
-              required
-            />
+              <TextArea
+                label="Message"
+                value={formValues.message}
+                onChange={(e) =>
+                  setFormValues((prev) => ({
+                    ...prev,
+                    message: e.target.value,
+                  }))
+                }
+              />
 
-            <TextArea
-              label="Message"
-              value={formValues.message}
-              onChange={(e) =>
-                setFormValues((prev) => ({ ...prev, message: e.target.value }))
-              }
-            />
-
-            <Button color="bordered" type="submit">
-              Envoyer
-            </Button>
-          </form>
+              <Button color="bordered" type="submit">
+                Envoyer
+              </Button>
+            </form>
+          </div>
+          <img
+            className="hidden xl:block w-[70%]"
+            src="contact.svg"
+            alt="contact"
+          />
         </>
       ) : (
         <div className="flex flex-col items-center gap-4">
