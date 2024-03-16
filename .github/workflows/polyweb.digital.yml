@@ -31,5 +31,5 @@ jobs:
             username: ${{ secrets.USERNAME }}
             password: ${{ secrets.PASSWORD }}
             port: ${{ secrets.PORT }}
-            script: sudo docker run -p 80:80 -d polyweb/polyweb.digital --name polyweb.digital
+            script: echo ${{ secrets.PASSWORD }} | sudo -S docker run -p 80:80 -d polyweb/polyweb.digital --name polyweb.digital
   
