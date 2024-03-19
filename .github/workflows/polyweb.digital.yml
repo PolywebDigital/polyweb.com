@@ -31,6 +31,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script:
-            echo ${{ secrets.PASSWORD }} | sudo -S docker ps -q --filter "name=polyweb.digital" | grep -q . && docker stop polyweb.digital && docker rm -fv polyweb.digital &&
-            echo ${{ secrets.PASSWORD }} | sudo -S docker run -p 80:80 --name polyweb.digital -d --rm polyweb/polyweb.digital
+          script: |
+            echo ${{ secrets.PASSWORD }} | sudo -S docker stop polyweb.digital
+            echo ${{ secrets.PASSWORD }} | sudo -S docker pull polyweb/polyweb.digital
+            echo ${{ secrets.PASSWORD }} | sudo -S docker run -p 80:80 --name polyweb.digital -d polyweb/polyweb.digital
