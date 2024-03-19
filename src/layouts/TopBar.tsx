@@ -42,19 +42,31 @@ const TopBar: React.FC = () => {
       >
         <div className="flex flex-col items-center">
           {links.map((link) => (
-            <Button color={link.color} onClick={() => navigate(link.path)}>
+            <Button
+              color={link.color}
+              onClick={() => {
+                navigate(link.path);
+                setIsMenuOpen(false);
+              }}
+            >
               {link.text}
             </Button>
           ))}
         </div>
         <img src="logo.png" className="max-w-60" alt="logo" />
       </Drawer>
-      <div className="flex justify-between w-full items-center px-[5%] md:px-[10%] lg:px-[15%] xl:px-[20%] py-6">
-        <img src="logo.png" className="max-w-60" alt="logo" />
-        <ul className="hidden sm:flex items-center md:gap-2">
+      <div className="flex justify-between w-full items-center px-[2%] md:px-[5%] lg:px-[15%] xl:px-[20%] py-6">
+        <img src="logo.png" className="w-[80%] max-w-60" alt="logo" />
+        <ul className="hidden sm:flex items-center">
           {links.map((link) => (
             <li>
-              <Button color={link.color} onClick={() => navigate(link.path)}>
+              <Button
+                color={link.color}
+                onClick={() => {
+                  navigate(link.path);
+                  setIsMenuOpen(false);
+                }}
+              >
                 {link.text}
               </Button>
             </li>

@@ -3,7 +3,7 @@ import { TextareaHTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 
 const textAreaVariants = cva(
-  "flex items-center px-4 py-2 rounded-md transition w-full outline outline-1 outline-gray-400 min-h-[150px]",
+  "flex items-center px-4 py-2 rounded-md transition w-full outline outline-2 outline-gray-400 min-h-[150px]",
   {
     variants: {},
     defaultVariants: {},

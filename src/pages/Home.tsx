@@ -21,7 +21,7 @@ const Home: React.FC = () => {
             faucibus tellus leo non pellentesque lorem vel. Arcu magna eros,
             potenti duis.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col items-center sm:flex-row gap-4">
             <Button color="dark"> Notre méthodologie </Button>
             <Button
               color="bordered"

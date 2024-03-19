@@ -108,7 +108,7 @@ const Appointment: React.FC = () => {
             </form>
           </div>
           <img
-            className="hidden xl:block w-[70%]"
+            className="hidden xl:block w-[50%]"
             src="contact.svg"
             alt="contact"
           />
