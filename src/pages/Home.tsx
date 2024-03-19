@@ -17,12 +17,14 @@ const Home: React.FC = () => {
             your business
           </h1>
           <p className="text-center md:text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-            faucibus tellus leo non pellentesque lorem vel. Arcu magna eros,
-            potenti duis.
+            Nous sommes une équipe jeune et dynamique spécialisée dans le
+            développement web pour les PME. Avec passion et créativité, nous
+            transformons vos idées en réalité digitale. Prêts à propulser votre
+            entreprise vers de nouveaux horizons ? Contactez-nous dès
+            aujourd'hui !
           </p>
           <div className="flex flex-col items-center sm:flex-row gap-4">
-            <Button color="dark"> Notre méthodologie </Button>
+            {/* <Button color="dark"> Notre méthodologie </Button> */}
             <Button
               color="bordered"
               onClick={() => navigate(paths.appointment)}
@@ -36,21 +38,31 @@ const Home: React.FC = () => {
       {/* Principals services section */}
       <div className="flex flex-col items-center gap-6">
         <h2 className="text-4xl font-bold"> Nos principaux services </h2>
-        <p className="text-center md:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh
-          elit pellentesque velit netus suspendisse. Sed enim, pretium, montes,
-          in ut dolor urna.
+        <p className="text-center">
+          Nous comprenons que la réussite dans le monde moderne exige une
+          présence en ligne solide et des processus efficaces. C'est pourquoi
+          nous offrons une gamme de services numériques conçus pour propulser
+          votre vers de nouveaux sommets.
         </p>
         <div className="flex flex-col md:flex-row gap-8">
           <ServicesCard
             title="Développement web"
             imageUrl="/website.svg"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent."
+            content="
+              De la conception initiale à la mise en ligne, 
+              notre développeur crée des sites web hautement fonctionnels 
+              et esthétiquement agréables, parfaitement adaptés aux
+              besoins de votre entreprise et de vos clients."
           />
           <ServicesCard
             title="Automatisation de processus"
             imageUrl="/automation.svg"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent."
+            content="
+              Simplifiez vos opérations et libérez 
+              votre équipe des tâches répétitives grâce à 
+              notre expertise en automatisation des processus. 
+              De la gestion des stocks à la facturation automatisée, 
+              nous vous aidons à gagner du temps et à optimiser vos ressources."
           />
         </div>
       </div>

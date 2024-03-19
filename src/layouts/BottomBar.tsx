@@ -1,3 +1,5 @@
+import { paths } from "../constants/Paths";
+
 const BottomBar: React.FC = () => {
   return (
     <div className="flex flex-col md:grid md:grid-cols-3 py-16 md:pt-16 md:pb-32 px-[25%] gap-5 justify-center bg-blue-50 ">
@@ -5,17 +7,29 @@ const BottomBar: React.FC = () => {
       <div className="flex flex-col h-fit gap-4 text-center">
         <h4 className="text-xl font-bold"> PolyWeb </h4>
         <p>
-          We specialize in providing services to desing websites, applications,
-          build and maintain business for customers.
+          Votre allié pour la transformation numérique. Développement web sur
+          mesure, automatisation, conseils stratégiques. Découvrez nos solutions
+          dès aujourd'hui !
         </p>
       </div>
       <div className="flex flex-col h-fit gap-4 text-center">
         <h4 className="text-xl font-bold"> A propos </h4>
         <ul>
-          <li> Accueil </li>
-          {/* <li> Notre méthodologie </li> */}
-          <li> Notre équipe </li>
-          {/* <li> Tarification </li> */}
+          <li>
+            <a href={paths.home}> Accueil </a>
+          </li>
+          {/* <li>
+            <a href={paths.ourMethodology}> Notre méthodologie </a>
+          </li> */}
+          <li>
+            <a href={paths.ourTeam}> Notre équipe </a>
+          </li>
+          {/* <li>
+            <a href={paths.pricing}> Tarification</a>
+          </li> */}
+          <li>
+            <a href={paths.appointment}> Prendre rendez-vous </a>
+          </li>
         </ul>
       </div>
       <div className="flex flex-col h-fit gap-4 text-center">
