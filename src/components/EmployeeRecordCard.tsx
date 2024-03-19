@@ -44,8 +44,8 @@ const EmployeeRecordCard: React.FC<EmployeeRecordCardProps> = (props) => {
         </div>
         <p className="text-sm sm:text-base">{description}</p>
         <ul className="flex flex-col gap-2">
-          {skills.map((skill) => (
-            <li className="flex gap-4 text-sm sm:text-base">
+          {skills.map((skill, index) => (
+            <li key={index} className="flex gap-4 text-sm sm:text-base">
               {skill.icon}
               {skill.title}
             </li>
@@ -53,8 +53,8 @@ const EmployeeRecordCard: React.FC<EmployeeRecordCardProps> = (props) => {
         </ul>
       </div>
       <ul className="flex flex-col gap-4 grow">
-        {socials.map((social) => (
-          <li>
+        {socials.map((social, index) => (
+          <li key={index}>
             <a title={social.accountTag} href={social.link}>
               {social.icon}
             </a>
