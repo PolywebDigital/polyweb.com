@@ -33,5 +33,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             echo ${{ secrets.PASSWORD }} | sudo -S docker stop polyweb.digital
+            echo ${{ secrets.PASSWORD }} | sudo -S docker container rm polyweb.digital
             echo ${{ secrets.PASSWORD }} | sudo -S docker pull polyweb/polyweb.digital
             echo ${{ secrets.PASSWORD }} | sudo -S docker run -p 80:80 --name polyweb.digital -d polyweb/polyweb.digital
