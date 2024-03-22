@@ -1,26 +1,33 @@
-import { useNavigate } from "react-router-dom";
-import Button from "../components/Buttons";
+import {} from "react-router-dom";
+import { Button } from "../components/ui/button";
 import { paths } from "../constants/Paths";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer } from "@mui/material";
 import { useState } from "react";
+import { useCustomNavigation } from "../lib/useCustomNavigation";
 
 type Link = {
   path: string;
   text: string;
   color: "default" | "dark";
+  index: number;
 };
 
 const TopBar: React.FC = () => {
+  const { navigateTo } = useCustomNavigation();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const navigate = useNavigate();
 
   const links: Link[] = [
-    { path: paths.home, text: "Accueil", color: "default" },
-    { path: paths.ourTeam, text: "Notre équipe", color: "default" },
+    { path: paths.home, text: "Accueil", color: "default", index: 0 },
+    { path: paths.ourTeam, text: "Notre équipe", color: "default", index: 1 },
     // { path: paths.ourMethodology, text: "Notre méthodologie", color: "default" },
     // { path: paths.pricing, text: "Tarification", color: "default" },
-    { path: paths.appointment, text: "Prendre rendez-vous", color: "dark" },
+    {
+      path: paths.appointment,
+      text: "Prendre rendez-vous",
+      color: "dark",
+      index: 2,
+    },
   ];
 
   return (
@@ -44,9 +51,9 @@ const TopBar: React.FC = () => {
           {links.map((link, index) => (
             <Button
               key={index}
-              color={link.color}
+              buttonType={link.color}
               onClick={() => {
-                navigate(link.path);
+                navigateTo(link.index);
                 setIsMenuOpen(false);
               }}
             >
@@ -62,9 +69,9 @@ const TopBar: React.FC = () => {
           {links.map((link, index) => (
             <li key={index}>
               <Button
-                color={link.color}
+                buttonType={link.color}
                 onClick={() => {
-                  navigate(link.path);
+                  navigateTo(link.index);
                   setIsMenuOpen(false);
                 }}
               >

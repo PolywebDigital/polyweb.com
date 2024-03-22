@@ -1,5 +1,5 @@
 import { GoArrowRight } from "react-icons/go";
-import Button from "./Buttons";
+import { Button } from "../components/ui/button";
 
 interface ServicesCardProps {
   title: string;
@@ -16,7 +16,7 @@ const ServicesCard: React.FC<ServicesCardProps> = (props) => {
       <div className="flex flex-col gap-6 grow text-center justify-between items-center">
         <h3 className="text-3xl font-semibold"> {title} </h3>
         <p className="hidden md:block"> {content} </p>
-        <Button color="bordered">
+        <Button buttonType="bordered">
           En savoir plus <GoArrowRight />
         </Button>
       </div>

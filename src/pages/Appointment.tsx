@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "../components/Buttons";
+import { Button } from "../components/ui/button";
 import TextArea from "../components/TextArea";
 import TextField from "../components/TextField";
 import { AppointmentInputs, sendAppointmentEmail } from "../api/email";
@@ -102,7 +102,7 @@ const Appointment: React.FC = () => {
                 }
               />
 
-              <Button color="bordered" type="submit">
+              <Button buttonType="bordered" type="submit">
                 Envoyer
               </Button>
             </form>

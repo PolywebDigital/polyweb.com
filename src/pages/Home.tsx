@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import Button from "../components/Buttons";
+import { Button } from "../components/ui/button";
 import ServicesCard from "../components/ServicesCard";
 import { GoArrowRight } from "react-icons/go";
-import { paths } from "../constants/Paths";
+import { useCustomNavigation } from "../lib/useCustomNavigation";
 
 const Home: React.FC = () => {
-  const navigate = useNavigate();
+  const { navigateTo } = useCustomNavigation();
 
   return (
     <div className="flex flex-col px-[5%] md:px-[15%] gap-32 md:gap-60">
@@ -25,10 +24,7 @@ const Home: React.FC = () => {
           </p>
           <div className="flex flex-col items-center sm:flex-row gap-4">
             {/* <Button color="dark"> Notre méthodologie </Button> */}
-            <Button
-              color="bordered"
-              onClick={() => navigate(paths.appointment)}
-            >
+            <Button buttonType="bordered" onClick={() => navigateTo(3)}>
               Parlons-en <GoArrowRight />
             </Button>
           </div>
@@ -76,7 +72,7 @@ const Home: React.FC = () => {
           src="/winner.svg"
           alt="image"
         />
-        <Button color="bordered" onClick={() => navigate(paths.appointment)}>
+        <Button buttonType="bordered" onClick={() => navigateTo(3)}>
           Parlons-en <GoArrowRight />
         </Button>
       </div>
