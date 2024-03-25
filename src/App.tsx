@@ -90,19 +90,6 @@ const App: React.FC = () => {
                 <div className={page.className}>{page.element}</div>
               </CarouselItem>
             ))}
-
-            {/* <CarouselItem>
-            <OurMethodology />
-          </CarouselItem> */}
-            <CarouselItem>
-              <OurTeam />
-            </CarouselItem>
-            {/* <CarouselItem>
-            <Pricing />
-          </CarouselItem> */}
-            <CarouselItem>
-              <Appointment />
-            </CarouselItem>
           </CarouselContent>
         </Carousel>
         <BottomBar />
