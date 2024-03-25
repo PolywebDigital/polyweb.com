@@ -33,14 +33,16 @@ const Home: React.FC = () => {
       </div>
       {/* Principals services section */}
       <div className="flex flex-col items-center gap-6">
-        <h2 className="text-4xl font-bold"> Nos principaux services </h2>
+        <h2 className="text-4xl text-center font-bold">
+          Nos principaux services
+        </h2>
         <p className="text-center">
           Nous comprenons que la réussite dans le monde moderne exige une
           présence en ligne solide et des processus efficaces. C'est pourquoi
           nous offrons une gamme de services numériques conçus pour propulser
           votre vers de nouveaux sommets.
         </p>
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col gap-8">
           <ServicesCard
             title="Développement web"
             imageUrl="/website.svg"
