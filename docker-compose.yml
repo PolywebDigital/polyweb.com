@@ -1,0 +1,16 @@
+services:
+  polyweb.digital:
+    image: nginx:latest
+    networks: 
+      - traefik_public
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.polyweb.rule=Host(`polyweb.digital`)'
+      - 'traefik.http.routers.polyweb.entrypoints=websecure'
+    restart: always
+
+networks:
+  traefik_public:
+    external: true
